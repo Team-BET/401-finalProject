@@ -1,9 +1,5 @@
 # 401finalProject - *Blandine, Eyob, Thomas*
 
-# Project Idea
-
-  * Create an app that will allow a user to guess the correct title and artist from a snippet of song. The user can guess the artist of the song. If the user failed to answer correctly, the app will give the user the correct answer.
-
 ### Vision
 
   #### What is the vision of this product?
