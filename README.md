@@ -1,5 +1,9 @@
 # 401-finalProject
 
+# Project Idea
+
+  * Create an app that will allow a user to guess the correct title and artist from a snippet of song. The user can guess the artist of the song. If the user failed to answer correctly, the app will give the user the correct answer.
+
 ### Wireframes:
 
 ![Wire-frame1](./asset/image/Wire-frame1.jpg)
@@ -23,7 +27,7 @@
 
 ### Software Requirements
 
-![Software Requirements](./requirements.md)
+[Software Requirements](./requirements.md)
 
 ### Domain Modeling
 
