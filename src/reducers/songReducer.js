@@ -7,7 +7,7 @@ const reducer = (state = initState, action) => {
 
   switch (action.type) {
     case "GET_SONG":
-      newState.getSong = action.payload;
+      newState.musicList = action.payload;
       break;
     default:
       break;
