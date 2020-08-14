@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import Song from "./components/getSong/song";
 import store from "./store";
 
+
 function App() {
   return (
     <Provider store={store}>
