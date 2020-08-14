@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Button } from "@material-ui/core"
-import * as actions from "../../actions/songAction";
+import * as actions from "../actions/songAction.js";
 
 function Song(props) {
   const { getTheSong, music } = props;
