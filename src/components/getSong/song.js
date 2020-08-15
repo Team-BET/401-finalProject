@@ -1,28 +1,59 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
-import * as actions from "../actions/songAction.js";
-import OneSong from '../oneSong/oneSong.js';
-import { useAuth0 } from '@auth0/auth0-react';
+import ReactHowler from 'react-howler'
 
 function Song(props) {
-  const {isAuthenticated} = useAuth0();
-  const { getTheSong, music } = props;
+  const { music } = props;
+  const [play, setPlay] = useState(false);
+  const [counter, setConter] = useState(0)
  
-
-  useEffect(() => {
-    getTheSong();
-  }, [getTheSong]);
+  let musicKeys = music;
+  console.log('musickeys', musicKeys)
+  let soundObj = musicKeys[counter]
+  console.log('sound', soundObj)
   
-  let musicKeys = music?.tracks?.data || [];
-  
-  return musicKeys.map((soundObj, index)=>{
+  const randomMusic = () => {
+   let res =  Math.ceil(Math.random() * 9)
+    if(res === counter){
+     return randomMusic()
+    } else {
+     setConter(res)
+     return res;  
+    }
+  }
+   
     return(
       <div>
-        <OneSong key={index} soundObj={soundObj}/>
+        <ReactHowler
+            src={soundObj.preview}
+            playing={play} />
+            <h1>{soundObj.title}</h1>
+            <img alt= {soundObj.artist} src={soundObj.artist.picture_medium}/>
+              
+          <button  onClick={ () => {
+            setPlay(true)
+            }}>       
+            Play
+          </button> 
+
+
+          <button onClick={ () => {
+            setPlay(false)
+            }}>
+            Pause
+          </button>
+          <button onClick={ () => {
+            setConter(randomMusic())
+            }}>
+            Next
+          </button>
       </div>
      
     )
-  })
+  // })
+
+  // return musicMap;
+    
   
 }
 
@@ -32,8 +63,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  getTheSong: (data) => dispatch(actions.getTheSong(data)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Song);
+export default connect(mapStateToProps, null)(Song);

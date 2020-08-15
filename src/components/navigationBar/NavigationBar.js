@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
-import logo from "./logo_Image/betlogo.png";
+import logo from "../logo_Image/betlogo.png";
 // import { useAuth0 } from "@auth0/auth0-react";
 
 const Styles = styled.div`
@@ -53,7 +53,7 @@ export const NavigationBar = () => (
           </Nav.Item>
           <Nav.Item>
             <Nav.Link>
-              <Link to="/Stuff">Play</Link>
+              <Link to="/SongLoading">Login</Link>
             </Nav.Link>
           </Nav.Item>
         </Nav>

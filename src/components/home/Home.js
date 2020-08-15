@@ -13,13 +13,6 @@ function Home(props) {
       </p>
 
       <p>Good Luck!</p>
-
-      {/* <button
-        class="btn btn-outline-secondary  btn-lg btn-block"
-        // I will 
-      >
-        Play
-      </button> */}
     </div>
   );
 }
