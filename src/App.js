@@ -1,19 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Provider } from "react-redux";
-import LoginButton from "./components/Authentication/logInButton.js";
-// import Logout from "./components/Authentication/logoutButton.js";
 import Song from "./components/getSong/song";
 
 import Footer from "./components/footer";
-//import Song from "./components/getSong/song";
 import { About } from "./About";
 import store from "./store";
-import Home from "./Home";
-import Stuff from "./Stuff";
+import Home from "./components/home";
+import SongLoading from "./components/songLoading/songLoading.js"; 
+import Result from "./components/results"
 import { Jumbotron } from "./components/Jumbotron";
 import { Layout } from "./components/Layout";
-import { NavigationBar } from "./components/NavigationBar";
+import { NavigationBar } from "./components/navigationBar/NavigationBar.js";
 
 function App() {
   return (
@@ -25,9 +23,10 @@ function App() {
           <Layout>
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/Stuff" component={Stuff} />
+              <Route path="/Songloading" component={SongLoading} />
               <Route path="/about" component={About} />
               <Route path="/Song" component={Song} />
+              <Route path="/Result" component={Result} />
             </Switch>
           </Layout>
           <Footer />
