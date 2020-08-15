@@ -13,10 +13,10 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <LoginButton />
-        <Logout />
         <Header />
         <Song />
         <Footer />
+        <Logout />
       </div>
     </Provider>
   );

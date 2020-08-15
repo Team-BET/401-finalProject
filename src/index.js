@@ -5,13 +5,15 @@ import App from './App';
 
 
 ReactDOM.render(
+  
   <Auth0Provider
     domain ={'dev-kn2wabk9.us.auth0.com'}
     clientId ={'Sp3ZoRJgUouM07SAvA4GD2VerTaCAN5y'}
     redirectUri={window.location.origin}
   >
-    <App />
+    <App />,
     </Auth0Provider>,
     document.getElementById('root')
+  
 );
 

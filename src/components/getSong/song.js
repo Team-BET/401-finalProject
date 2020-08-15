@@ -1,43 +1,30 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { Button } from "@material-ui/core"
 import * as actions from "../actions/songAction.js";
-// import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-
-
-
+import OneSong from '../oneSong/oneSong.js';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function Song(props) {
+  const {isAuthenticated} = useAuth0();
   const { getTheSong, music } = props;
-  console.log('music', music)
+ 
 
   useEffect(() => {
-    console.log('inside useEffect')
     getTheSong();
   }, [getTheSong]);
-
-  let musicCollection = [];
-
+  
   let musicKeys = music?.tracks?.data || [];
   
-
-
-  for (let i = 0; i < musicKeys.length; i++){
-    console.log('musicKeys', musicKeys[i].preview)
-
-    musicCollection.push(<Button key={i} onClick={ () =>(musicKeys[i].preview)}>
-      Play 
-   </Button>);
-  }
-    console.log(musicCollection)
-  return (
-  <>{musicCollection}</>
-  );
+  return musicKeys.map((soundObj, index)=>{
+    return(
+      <div>
+        <OneSong key={index} soundObj={soundObj}/>
+      </div>
+     
+    )
+  })
+  
 }
-
-
-
-
 
 const mapStateToProps = (state) => {
   return {
