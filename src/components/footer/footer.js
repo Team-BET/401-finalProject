@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
-function Footer(props){
-
-  return(
-    <div>
-    <p>BET @c 2020</p>
-    </div>
-  )
+function Footer(props) {
+  return (
+    <footer class="footer">
+      <p>
+        &copy; Copyright 2020 Blandine Dasilveira | Eyob Tamir | Thomas Tilahun
+      </p>
+    </footer>
+  );
 }
 
 export default Footer;
