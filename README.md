@@ -6,11 +6,11 @@
 
 ### Wireframes:
 
-![Wire-frame1](./asset/image/Wire-frame1.jpg)
+![Wire-frame1](./src/asset/image/Wire-frame1.jpg)
 
-![Wire-frame2](./asset/image/Wire-frame2.jpg)
+![Wire-frame2](./src/asset/image/Wire-frame2.jpg)
 
-![Wire-frame3](./asset/image/Wire-frame3.jpg)
+![Wire-frame3](./src/asset/image/Wire-frame3.jpg)
 
 
 ### User Stories
