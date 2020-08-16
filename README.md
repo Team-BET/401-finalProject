@@ -31,7 +31,7 @@
 
 ### Domain Modeling
 
-![Domain Modeling](./asset/image/Domain-modeling.jpg)
+![Domain Modeling](./src/asset/image/Domain-modeling.jpg)
 
 
 
