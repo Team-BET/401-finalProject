@@ -13,6 +13,7 @@
     "bootstrap": "^4.5.2",
     "dotenv": "^8.2.0",
     "howler": "^2.2.0",
+    "mdbreact": "^4.27.0",
     "mogodb": "0.0.1-security",
     "mongodb": "^3.6.0",
     "mongoose": "^5.9.29",
