@@ -9,7 +9,7 @@ function Song(props) {
   const [play, setPlay] = useState(false);
   const [counter, setConter] = useState(0)
   const [wrongAnswerOne, setWrongAnswerOne] = useState();
-  const [wrongAnswerTwo, ssetWrongAnswerTwo] = useState();
+  const [wrongAnswerTwo, setWrongAnswerTwo] = useState();
   
   let musicKeys = music;
   console.log('musickeys', musicKeys)
@@ -68,9 +68,6 @@ function Song(props) {
     </div>
   
   )
-  // })
-
-  // return musicMap;
     
   
 }
