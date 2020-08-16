@@ -7,8 +7,6 @@ export default function Results(props){
   return(
     <div>
       <p>Results</p>
-      <h2></h2>
-
     </div>
   )
 }

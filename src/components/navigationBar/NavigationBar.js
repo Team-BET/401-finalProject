@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 import logo from "../logo_Image/betlogo.png";
-// import { useAuth0 } from "@auth0/auth0-react";
+import LogInButton from "../Authentication/logInButton.js";
+import LogOutButton from "../Authentication/logoutButton.js"
 
 const Styles = styled.div`
   .navbar {
@@ -26,7 +27,7 @@ const Styles = styled.div`
   }
 `;
 
-export const NavigationBar = () => (
+export const NavigationBar = (props) => (
   <Styles>
     <Navbar expand="lg">
       <Navbar.Brand href="/">
@@ -53,7 +54,12 @@ export const NavigationBar = () => (
           </Nav.Item>
           <Nav.Item>
             <Nav.Link>
-              <Link to="/SongLoading">Login</Link>
+              <Link to="/SongLoading"> <LogInButton/> </Link>
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>
+              <Link to="/"> <LogOutButton /> </Link>
             </Nav.Link>
           </Nav.Item>
         </Nav>
