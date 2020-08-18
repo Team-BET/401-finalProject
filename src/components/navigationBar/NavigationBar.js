@@ -4,7 +4,7 @@ import { Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 import logo from "../logo_Image/betlogo.png";
 import LogInButton from "../Authentication/logInButton.js";
-import LogOutButton from "../Authentication/logoutButton.js"
+import LogOutButton from "../Authentication/logoutButton.js";
 // import SongLoading from "../songLoading/songLoading";
 
 const Styles = styled.div`
@@ -23,7 +23,7 @@ const Styles = styled.div`
     color: #bbb;
 
     &:hover {
-      color: #e25822;
+      color: #ffffff;
     }
   }
 `;
@@ -60,12 +60,18 @@ export const NavigationBar = (props) => (
           </Nav.Item>
           <Nav.Item>
             <Nav.Link>
-              <Link to="/"> <LogInButton/> </Link>
+              <Link to="/">
+                {" "}
+                <LogInButton />{" "}
+              </Link>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link>
-              <Link to="/"> <LogOutButton /> </Link>
+              <Link to="/">
+                {" "}
+                <LogOutButton />{" "}
+              </Link>
             </Nav.Link>
           </Nav.Item>
         </Nav>
