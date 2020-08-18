@@ -34,7 +34,7 @@ const HomePlayButton = (props) => {
         paly the game you need to sign up first.
       </p>
       <Link class="btn btn-outline-danger" to="/Songloading">
-        play
+        Play
       </Link>
     </div>
   );

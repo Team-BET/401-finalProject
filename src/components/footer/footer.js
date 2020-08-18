@@ -7,33 +7,42 @@ const Footer = (props) => {
       <MDBContainer fluid className="text-center text-md-left ">
         <MDBRow>
           <MDBCol md="6">
-            <h5 className="title">BET MUSIC </h5>
-            <p>
-              Can you guess the artist? This quiz is unique and fun because it
-              involves a series of popular song lyrics, and you have to imagine
-              who sung the song.
+            <h5 className="title">
+              <strong>GUESS THE SONG FROM THE LYRICS</strong>
+            </h5>
+            <p className="footer-paragraph">
+              Music brings harmony to the world.
             </p>
           </MDBCol>
           <MDBCol md="6">
             <h5 className="title"></h5>
             <ul>
+              <p className="contact-us">Contact Us</p>
               <li className="list-unstyled">
-                <a href="#!">Link 1</a>
+                <a href="https://www.linkedin.com/in/blandine-dasilveira-1514a1163/">
+                  Blandine
+                </a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 2</a>
+                <a href="https://www.linkedin.com/in/eyob-tamir-8396b4197/">
+                  Eyob
+                </a>
               </li>
               <li className="list-unstyled">
-                <a href="#!">Link 3</a>
+                <a href="https://www.linkedin.com/in/thomas-tilahun/">Thomas</a>
               </li>
             </ul>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+
       <div className="footer-copyright text-center py-3">
-        <MDBContainer fluid>
+        <MDBContainer className="buttom" fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
+          <a className="site" href="https://www.mdbootstrap.com">
+            {" "}
+            bet-guessing-game.com{" "}
+          </a>
         </MDBContainer>
       </div>
     </MDBFooter>
@@ -41,27 +50,3 @@ const Footer = (props) => {
 };
 
 export default Footer;
-
-// import React from "react";
-// import styled from "styled-components";
-
-// const Styles = styled.div`
-//   .footer {
-//     position: relative;
-//     height: 80px;
-//     clear: both;
-//     padding-top: 20px;
-//     background-color: #222;
-//     color: #ffff;
-//     text-align: center;
-//   }
-// `;
-// export const Footer = (props) => (
-//   <Styles>
-//     <footer class="footer">
-//       <p>
-//         &copy; Copyright 2020 Blandine Dasilveira | Eyob Tamir | Thomas Tilahun
-//       </p>
-//     </footer>
-//   </Styles>
-// );

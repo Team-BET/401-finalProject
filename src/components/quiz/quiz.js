@@ -11,7 +11,7 @@ function Quiz(props) {
   };
 
   return (
-    <div>
+    <>
       <h4>Who is the Artist of this song?</h4>
       <form>
         <input type="radio" value="option1" checked={quiz} />
@@ -22,7 +22,7 @@ function Quiz(props) {
         {props.name}
       </form>
       <p></p>
-    </div>
+    </>
   );
 }
 
