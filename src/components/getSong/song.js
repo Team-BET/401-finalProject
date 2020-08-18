@@ -12,9 +12,7 @@ function Song(props) {
   const [wrongAnswerTwo, setWrongAnswerTwo] = useState();
   
   let musicKeys = music;
-  console.log('musickeys', musicKeys)
   let soundObj = musicKeys[counter]
-  console.log('sound', soundObj)
   
   const randomMusic = () => {
    let res =  Math.ceil(Math.random() * 9)

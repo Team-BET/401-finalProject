@@ -3,18 +3,19 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const Footer = (props) => {
   return (
-    <MDBFooter color="gray" className="font-small pt-4 mt-4 footer">
-      <MDBContainer fluid className="text-center text-md-left">
+    <MDBFooter color="white" className="font-small ">
+      <MDBContainer fluid className="text-center text-md-left ">
         <MDBRow>
           <MDBCol md="6">
-            <h5 className="title">Footer Content</h5>
+            <h5 className="title">BET MUSIC </h5>
             <p>
-              Here you can use rows and columns here to organize your footer
-              content.
+              Can you guess the artist? This quiz is unique and fun because it
+              involves a series of popular song lyrics, and you have to imagine
+              who sung the song.
             </p>
           </MDBCol>
           <MDBCol md="6">
-            <h5 className="title">Links</h5>
+            <h5 className="title"></h5>
             <ul>
               <li className="list-unstyled">
                 <a href="#!">Link 1</a>

@@ -35,7 +35,7 @@ export const About = () => (
             <MDBCardImage cascade className="img-fluid" src={blandineImage} />
             <MDBCardBody cascade>
               <MDBCardTitle>Blandine Dasilveira</MDBCardTitle>
-              <MDBCardText>Aspiring full stack developer. Currently have experience in HTML5, CSS, Javascript, NodeJS, ExpressJS </MDBCardText>
+              <MDBCardText  color="default-color" blue expand="md">Aspiring full stack developer. Currently have experience in HTML5, CSS, Javascript, NodeJS, ExpressJS </MDBCardText>
               <MDBBtn  rounded color="danger" >   <a href="https://github.com/Blandine12">Blandine Github</a>
                 </MDBBtn>
 
