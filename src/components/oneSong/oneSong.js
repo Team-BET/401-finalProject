@@ -1,35 +1,42 @@
-import React, { useState } from "react";
-import button from 'react'
-import ReactHowler from 'react-howler'
+// import React, { useState } from "react";
+// import ReactHowler from "react-howler";
+// import { Button } from "react-bootstrap";
 
-function OneSong(props) {
-  const [play, setPlay] = useState(false);
-  
-    return(
-      
-          <div>
-          <ReactHowler
-            src={props.soundObj.preview}
-            play={play} />
-            <h1>{props.soundObj.title}</h1>
-            <img alt= {props.soundObj.artist} src={props.soundObj.artist.picture_medium}/>
+// function OneSong(props) {
+//   const [play, setPlay] = useState(false);
 
-          <button key={props.index} onClick={ () => {
-            setPlay(true)
-            }}>       
-            Play
-          </button>
+//   return (
+//     <div class="row">
+//       <ReactHowler src={props.soundObj.preview} playing={play} />
+//       <div class="col-sm">
+//         <h1>{props.soundObj.title}</h1>
+//         <img
+//           alt={props.soundObj.artist}
+//           src={props.soundObj.artist.picture_medium}
+//         />
+//       </div>
+//       <div class="col-sm">
+//         <button
+//           class="btn btn-outline-danger"
+//           key={props.index}
+//           onClick={() => {
+//             setPlay(true);
+//           }}
+//         >
+//           Play
+//         </button>
+//         <button
+//           class="btn btn-outline-danger"
+//           key={props.index}
+//           onClick={() => {
+//             setPlay(false);
+//           }}
+//         >
+//           Pause
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
 
-          <button key={props.index} onClick={ () => {
-            setPlay(false)
-            }}>
-            Pause
-          </button>
-          </div>
-            )
-
-  
-}
-
-
-export default OneSong;
+// export default OneSong;

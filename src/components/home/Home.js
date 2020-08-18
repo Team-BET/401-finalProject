@@ -9,7 +9,7 @@ const Home = (props) => {
     return HomePlayButton();
   } else {
     return (
-      <div>
+      <div class="home-page">
         <h2>HELLO</h2>
         <p>
           Can you guess the artist? This quiz is unique and fun because it
@@ -28,13 +28,10 @@ const Home = (props) => {
 const HomePlayButton = (props) => {
   return (
     <div>
-      <p>
-        sung the song. For someone who is a fan of music, this may be a total
-        breeze. Those who are not as familiar with music can learn something. To
-        paly the game you need to sign up first.
-      </p>
-      <Link class="btn btn-outline-danger" to="/Songloading">
-        play
+      <h3>Please press the paly button to start the game</h3>
+
+      <Link class="btn btn-danger btn-lg" to="/Songloading">
+        Play
       </Link>
     </div>
   );
