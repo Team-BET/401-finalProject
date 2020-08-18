@@ -1,54 +1,37 @@
 import React,  {useState}  from "react";
-
-
+import { RadioGroup, RadioButton } from 'react-radio-buttons';
 
 
 function Quiz(props) {
-  
-  
-  const [quiz, setQuiz] = useState();
-
+  const [quiz, setQuiz] = useState(false);
   const randomQuiz = (n) => {
     
   }
 
+const correct = (props) =>{
+  setQuiz(true)
+  alert("correct answer")
+}
+
   return (
-  
-
-    <div>
-      
-      <h1>Who is the Artist of this song?
-
-      </h1>
+    <div> 
+      <h4>
+      Who is the Artist of this song?
+      </h4>
       <form>
-        <label>
-          <input type = "radio" value = "option1" checked = {true} />
+          <input type = "radio" value = "option1" checked = {quiz} />
           {props.name}
-        </label>
-
-        <label>
-          <input type = "radio" value = "option1" checked = {true} />
+          <input type = "radio" value = {correct} checked = {correct} />
           {props.name}
-        </label>
-
-        <label>
-          <input type = "radio" value = "option1" checked = {true} />
-          {props.name}
-        </label>
+          <input type = "radio" value = "option1" checked = {quiz} />
+          {props.name} 
       </form>
-
-
-
-
-
      <p>
       
      </p>
     </div>
   );
 }
-
-
 
 
 
