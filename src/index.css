@@ -1,16 +1,23 @@
 body {
   background-color: whitesmoke;
+  background-image: url(./components//logo_Image/background-image6.jpg);
+  opacity: 1;
   padding: 20px;
   margin: 0;
 }
 .btn {
-  margin: 3px !important;
+  margin: 2px !important;
+  color: white;
+  background-color: orangered;
 }
 .container {
   min-height: 500px;
 }
 .page-footer {
   background-color: #3b3b3a;
+  color: black;
+}
+.home-page {
   color: black;
 }
 .title {
@@ -28,9 +35,11 @@ body {
   color: white;
 }
 .footer-paragraph {
-  color: orangered;
+  color: white;
   font-family: serif;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px black;
+  font-style: italic;
+  font-size: 25px;
 }
 
 .footer {
@@ -59,9 +68,11 @@ ul.header {
   background-color: #111;
   padding: 0;
 }
-.site {
-  color: white;
+.list-unstyled {
+  color: orangered;
+  text-shadow: 2px 2px 5px black;
 }
+
 .footer-copyright {
   background-color: #222;
 }

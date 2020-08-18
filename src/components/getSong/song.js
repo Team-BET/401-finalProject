@@ -54,7 +54,7 @@ function Song(props) {
 
       <div class="col-sm-12 ml-5">
         <button
-          class="btn btn-outline-danger"
+          class="btn btn-warning"
           onClick={() => {
             setPlay(true);
           }}
@@ -63,7 +63,7 @@ function Song(props) {
         </button>
 
         <button
-          class="btn btn-outline-danger"
+          class="btn btn-warning"
           onClick={() => {
             setPlay(false);
           }}
@@ -71,7 +71,7 @@ function Song(props) {
           Pause
         </button>
         <button
-          class="btn btn-outline-danger"
+          class="btn btn-warning"
           onClick={() => {
             setConter(randomMusic());
           }}

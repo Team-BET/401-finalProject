@@ -11,25 +11,36 @@ const Footer = (props) => {
               <strong>GUESS THE SONG FROM THE LYRICS</strong>
             </h5>
             <p className="footer-paragraph">
-              Music brings harmony to the world.
+              music brings harmony to the world!
             </p>
           </MDBCol>
           <MDBCol md="6">
             <h5 className="title"></h5>
             <ul>
-              <p className="contact-us">Contact Us</p>
+              <p className="contact-us">Contact Us - LinkedIn</p>
               <li className="list-unstyled">
-                <a href="https://www.linkedin.com/in/blandine-dasilveira-1514a1163/">
-                  Blandine
+                <a
+                  className="list-unstyled"
+                  href="https://www.linkedin.com/in/blandine-dasilveira-1514a1163/"
+                >
+                  Blandine Dasilveira
                 </a>
               </li>
               <li className="list-unstyled">
-                <a href="https://www.linkedin.com/in/eyob-tamir-8396b4197/">
-                  Eyob
+                <a
+                  className="list-unstyled"
+                  href="https://www.linkedin.com/in/eyob-tamir-8396b4197/"
+                >
+                  Eyob Tamir
                 </a>
               </li>
               <li className="list-unstyled">
-                <a href="https://www.linkedin.com/in/thomas-tilahun/">Thomas</a>
+                <a
+                  className="list-unstyled"
+                  href="https://www.linkedin.com/in/thomas-tilahun/"
+                >
+                  Thomas Tilahun
+                </a>
               </li>
             </ul>
           </MDBCol>
