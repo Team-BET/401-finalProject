@@ -2,6 +2,7 @@ import React from "react";
 import { Jumbotron as Jumbo, Container } from "react-bootstrap";
 import styled from "styled-components";
 import boatImage from "../asset/image/boatImage.jpg";
+import { useAuth0 } from '@auth0/auth0-react';
 
 const Styles = styled.div`
   .jumbo {
@@ -30,14 +31,19 @@ const Styles = styled.div`
   }
 `;
 
-export const Jumbotron = () => (
+export const Jumbotron = () => {
+const { isAuthenticated, user} = useAuth0();
+return(
+  isAuthenticated &&(
   <Styles>
     <Jumbo fluid className="jumbo">
       <div className="overlay"></div>
       <Container>
-        <h1>Welcome</h1>
+        <h1>Welcome {user.name}</h1>
         <p>Song Guessing Game</p>
       </Container>
     </Jumbo>
   </Styles>
-);
+)
+)
+}

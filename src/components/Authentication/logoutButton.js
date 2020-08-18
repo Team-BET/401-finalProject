@@ -9,9 +9,9 @@ const LogoutButton = () => {
   return(
     isAuthenticated &&(
     <div>
-      <button onClick={ () => logout()}>
+      <p onClick={ () => logout()}>
         Log out
-      </button>
+      </p>
     </div>
   )    
   ) 
