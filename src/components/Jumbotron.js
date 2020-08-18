@@ -41,7 +41,7 @@ export const Jumbotron = () => {
           <h1 style={{ display: isAuthenticated ? "block" : "none" }}>
             Welcome {user?.name}
           </h1>
-          <p className="Song-guess-Jumbotron">Song Guessing Game</p>
+          <p className="song-guess">Song Guessing Game</p>
         </Container>
       </Jumbo>
     </Styles>
