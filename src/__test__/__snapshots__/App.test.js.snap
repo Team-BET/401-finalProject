@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for App matches the snapshot 1`] = `
+Array [
+  <div
+    className="sc-AxirZ ctBHqF"
+  >
+    <nav
+      className="navbar navbar-expand-lg navbar-light"
+    >
+      <a
+        className="navbar-brand"
+        href="/"
+      >
+         
+        <img
+          alt="logo"
+          className="App-logo"
+          src="betlogo.png"
+        />
+      </a>
+      <button
+        aria-controls="basic-navbar-nav"
+        aria-label="Toggle navigation"
+        className="navbar-toggler collapsed"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        aria-expanded={null}
+        className="navbar-collapse collapse"
+        id="basic-navbar-nav"
+      >
+        <div
+          className="ml-auto navbar-nav"
+          onKeyDown={[Function]}
+        >
+          <div
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              data-rb-event-key={null}
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+            >
+              <a
+                href="/"
+                onClick={[Function]}
+              >
+                Home
+              </a>
+            </a>
+          </div>
+          <div
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              data-rb-event-key={null}
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+            >
+              <a
+                href="/about"
+                onClick={[Function]}
+              >
+                About
+              </a>
+            </a>
+          </div>
+          <div
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              data-rb-event-key={null}
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+            >
+              <a
+                href="/contact"
+                onClick={[Function]}
+              >
+                Result
+              </a>
+            </a>
+          </div>
+          <div
+            className="nav-item"
+          >
+            <a
+              className="nav-link"
+              data-rb-event-key={null}
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+            >
+              <a
+                href="/SongLoading"
+                onClick={[Function]}
+              >
+                Login
+              </a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="sc-AxjAm dPHnOR"
+  >
+    <div
+      className="jumbo jumbotron jumbotron-fluid"
+    >
+      <div
+        className="overlay"
+      />
+      <div
+        className="container"
+      >
+        <h1>
+          Welcome
+        </h1>
+        <p>
+          Song Guessing Game
+        </p>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="container"
+  >
+    <div>
+      <h2>
+        HELLO
+      </h2>
+      <p>
+        Can you guess the artist? This quiz is unique and fun because it involves a series of popular song lyrics, and you have to imagine who sung the song. For someone who is a fan of music, this may be a total breeze. Those who are not as familiar with music can learn something. To paly the game you need to sign up first.
+      </p>
+      <p>
+        Good Luck!
+      </p>
+    </div>
+  </div>,
+  <footer
+    class="footer"
+  >
+    <p>
+      © Copyright 2020 Blandine Dasilveira | Eyob Tamir | Thomas Tilahun
+    </p>
+  </footer>,
+]
+`;
