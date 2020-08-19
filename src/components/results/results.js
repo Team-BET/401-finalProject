@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
-import SongLoading from '../songLoading/songLoading.js'
+import React from 'react';
+import { connect } from 'react-redux';
 
-export default function Results(props){
- 
+const Results = (props) => {
+ console.log('result', props)
  
   return(
     <div>
-      <p>Results</p>
+      <p>Results: {props.correctAnswers - props.inCorrectAnswers}</p>
     </div>
   )
 }
+
+const mapStateToProps = (state) => {
+  return {
+    correctAnswers: state.musicData.correctAnswers,
+    inCorrectAnswers:state.musicData.inCorrectAnswers
+  };
+};
+
+export default connect(mapStateToProps, null)(Results);

@@ -12,3 +12,17 @@ const getSong = (payload) => {
     payload,
   };
 };
+
+export  const addCorrect = () => {
+  return {
+    type: "ADD_TO_CORRECT",
+    payload: null,
+  }
+}
+export const addInCorrect = () => {
+  return {
+    type: "ADD_TO_INCORRECT",
+    payload: null,
+  }
+}
+
