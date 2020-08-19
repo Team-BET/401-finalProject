@@ -1,9 +1,39 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import ReactHowler from "react-howler";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
+import { AccessAlarm, ThreeDRotation } from "@material-ui/icons";
+import SkipNextIcon from "@material-ui/icons/SkipNext";
 import Quiz from "../quiz/quiz.js";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+
+const useStyles = makeStyles({
+  root: {
+    naxWidth: 275,
+  },
+  bullet: {
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)",
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
+});
 
 function Song(props) {
+  const classes = useStyles();
+  const bull = <span className={classes.bullet}>•</span>;
+
   const { music } = props;
   const [play, setPlay] = useState(false);
   const [counter, setConter] = useState(music[0]);
@@ -49,54 +79,53 @@ function Song(props) {
   }, []);
 
   return (
-    <div class="row">
-      <div class="col-sm-12 float-left">
-        <div class="col-sm-8 float-left">
-          <ReactHowler src={counter.preview} playing={play} />
-          <h1>{counter.title}</h1>
-          <img
-            class="mr-4 float-left"
-            alt={counter.artist}
-            src={counter.artist.picture_medium}
-          />
-          <Quiz
-            class="float-left"
-            key={counter.artist.name}
-            correctAnswer={counter}
-            wrongAnswerOne={wrongAnswerOne}
-            wrongAnswerTwo={wrongAnswerTwo}
-          />
+    <Card className={classes.root} variant="outlined">
+      <div class="row">
+        <div class="col-sm-12 float-left">
+          <div class="col-sm-8 float-left">
+            <ReactHowler src={counter.preview} playing={play} />
+            <h4>{counter.title}</h4>
+            <img
+              class="mr-4 float-left"
+              alt={counter.artist}
+              src={counter.artist.picture_medium}
+            />
+            <Quiz
+              class="float-left"
+              key={counter.artist.name}
+              correctAnswer={counter}
+              wrongAnswerOne={wrongAnswerOne}
+              wrongAnswerTwo={wrongAnswerTwo}
+            />
+          </div>
+        </div>
+
+        <div class="col-sm-12 ml-5">
+          <PlayArrowIcon
+            style={{ fontSize: 50 }}
+            fontSize="large"
+            onClick={() => {
+              setPlay(true);
+            }}
+          ></PlayArrowIcon>
+
+          <PauseCircleFilledIcon
+            fontSize="large"
+            style={{ fontSize: 50 }}
+            onClick={() => {
+              setPlay(false);
+            }}
+          ></PauseCircleFilledIcon>
+          <SkipNextIcon
+            style={{ fontSize: 50 }}
+            fontSize="large"
+            onClick={() => {
+              setConter(randomMusic());
+            }}
+          ></SkipNextIcon>
         </div>
       </div>
-
-      <div class="col-sm-12 ml-5">
-        <button
-          class="btn btn-warning"
-          onClick={() => {
-            setPlay(true);
-          }}
-        >
-          Play
-        </button>
-
-        <button
-          class="btn btn-warning"
-          onClick={() => {
-            setPlay(false);
-          }}
-        >
-          Pause
-        </button>
-        <button
-          class="btn btn-warning"
-          onClick={() => {
-            setConter(randomMusic());
-          }}
-        >
-          Next
-        </button>
-      </div>
-    </div>
+    </Card>
   );
 }
 
