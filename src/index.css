@@ -1,15 +1,21 @@
 body {
-  background-color: whitesmoke;
-  background-image: url(./components//logo_Image/background-image6.jpg);
+  /* background-color: rgba(255, 68, 0, 0.027); */
+  /* background-image: url(./components//logo_Image/Music.jpg); */
+  background-image: url(./components//logo_Image/headphones2.jpg);
   opacity: 1;
-  padding: 20px;
+  padding: 10px;
   margin: 0;
 }
+.row {
+  color: aliceblue;
+}
+
 .btn {
   margin: 2px !important;
   color: white;
   background-color: orangered;
 }
+
 .container {
   min-height: 500px;
 }
@@ -31,7 +37,7 @@ body {
   letter-spacing: -1px;
   line-height: 1;
 }
-ul{
+ul {
   list-style-type: none;
 }
 .contact-us {
@@ -44,7 +50,26 @@ ul{
   font-style: italic;
   font-size: 18px;
 }
-
+/* .home-page {
+  margin-top: 10%;
+} */
+.hello {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 0 10px;
+  letter-spacing: 5px;
+  color: white;
+}
+.good_luck {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+}
+.home_p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+}
 .footer {
   position: relative;
   /* margin-top: -150px; negative value of footer height */
