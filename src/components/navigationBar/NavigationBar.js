@@ -5,7 +5,7 @@ import styled from "styled-components";
 import logo from "../logo_Image/betlogo.png";
 import LogInButton from "../Authentication/logInButton.js";
 import LogOutButton from "../Authentication/logoutButton.js";
-// import SongLoading from "../songLoading/songLoading";
+
 
 const Styles = styled.div`
   .navbar {
@@ -48,14 +48,9 @@ export const NavigationBar = (props) => (
               <Link to="/about">About</Link>
             </Nav.Link>
           </Nav.Item>
-          {/* <Nav.Item>
-            <Nav.Link>
-              <Link to="/SongLoading"> play </Link>
-            </Nav.Link>
-          </Nav.Item> */}
           <Nav.Item>
             <Nav.Link>
-              <Link to="/contact">Result</Link>
+              <Link to="/Result">Result</Link>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>

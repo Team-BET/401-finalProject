@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import { connect } from 'react-redux';
 import * as actions from "../actions/songAction.js";
+import Spinner from 'react-bootstrap/Spinner';
 
 
 const SongWrapper = (props) => {
@@ -10,7 +11,7 @@ const SongWrapper = (props) => {
   getTheSong();
   }, [getTheSong]);
 
-  let whatToRender = <p> loading ...</p>
+  let whatToRender = <Spinner animation="border" variant="danger" />
   if(music.length > 0){
     whatToRender = children
   }
