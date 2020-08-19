@@ -7,11 +7,11 @@ import { AccessAlarm, ThreeDRotation } from "@material-ui/icons";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import Quiz from "../quiz/quiz.js";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+// import Card from "@material-ui/core/Card";
+// import CardActions from "@material-ui/core/CardActions";
+// import CardContent from "@material-ui/core/CardContent";
+// import Button from "@material-ui/core/Button";
+// import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
@@ -79,53 +79,56 @@ function Song(props) {
   }, []);
 
   return (
-    <Card className={classes.root} variant="outlined">
-      <div class="row">
-        <div class="col-sm-12 float-left">
-          <div class="col-sm-8 float-left">
-            <ReactHowler src={counter.preview} playing={play} />
-            <h4>{counter.title}</h4>
-            <img
-              class="mr-4 float-left"
-              alt={counter.artist}
-              src={counter.artist.picture_medium}
-            />
-            <Quiz
-              class="float-left"
-              key={counter.artist.name}
-              correctAnswer={counter}
-              wrongAnswerOne={wrongAnswerOne}
-              wrongAnswerTwo={wrongAnswerTwo}
-            />
-          </div>
-        </div>
-
-        <div class="col-sm-12 ml-5">
-          <PlayArrowIcon
-            style={{ fontSize: 50 }}
-            fontSize="large"
-            onClick={() => {
-              setPlay(true);
-            }}
-          ></PlayArrowIcon>
-
-          <PauseCircleFilledIcon
-            fontSize="large"
-            style={{ fontSize: 50 }}
-            onClick={() => {
-              setPlay(false);
-            }}
-          ></PauseCircleFilledIcon>
-          <SkipNextIcon
-            style={{ fontSize: 50 }}
-            fontSize="large"
-            onClick={() => {
-              setConter(randomMusic());
-            }}
-          ></SkipNextIcon>
+    // <Card className={classes.root} variant="outlined">
+    <div class="row">
+      <div class="col-sm-12 float-left">
+        <div class="col-sm-8 float-left">
+          <ReactHowler src={counter.preview} playing={play} />
+          <h4 class="title">{counter.title}</h4>
+          <img
+            class="mr-4 float-left"
+            alt={counter.artist}
+            src={counter.artist.picture_medium}
+          />
+          <Quiz
+            class="float-left"
+            key={counter.artist.name}
+            correctAnswer={counter}
+            wrongAnswerOne={wrongAnswerOne}
+            wrongAnswerTwo={wrongAnswerTwo}
+          />
         </div>
       </div>
-    </Card>
+
+      <div class="col-sm-12 ml-5">
+        <PlayArrowIcon
+          style={{ fontSize: 50 }}
+          color="secondary"
+          fontSize="large"
+          onClick={() => {
+            setPlay(true);
+          }}
+        ></PlayArrowIcon>
+
+        <PauseCircleFilledIcon
+          fontSize="large"
+          color="secondary"
+          style={{ fontSize: 50 }}
+          onClick={() => {
+            setPlay(false);
+          }}
+        ></PauseCircleFilledIcon>
+        <SkipNextIcon
+          style={{ fontSize: 50 }}
+          fontSize="large"
+          color="secondary"
+          onClick={() => {
+            setConter(randomMusic());
+          }}
+        ></SkipNextIcon>
+      </div>
+    </div>
+    // {/* </Card> */}
   );
 }
 
