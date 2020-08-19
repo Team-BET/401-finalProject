@@ -33,6 +33,7 @@ const Styles = styled.div`
 
 export const Jumbotron = () => {
   const { isAuthenticated, user } = useAuth0();
+ 
   return (
     <Styles>
       <Jumbo fluid className="jumbo">

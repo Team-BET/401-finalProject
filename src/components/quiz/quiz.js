@@ -47,19 +47,20 @@ function Quiz(props) {
   if(c === song){
     correctAnswer = 'c';
   }
-  let InputA = <span><input type="radio" onClick={correctAnswer === 'a' ? () => youAreCorrect() : () => youAreInCorrect()}/>{a}</span>
-  let InputB = <span><input type="radio" onClick={correctAnswer === 'b' ? () => youAreCorrect() : () => youAreInCorrect()}/>{b}</span>
-  let InputC= <span><input type="radio" onClick={correctAnswer === 'c' ? () => youAreCorrect() : () => youAreInCorrect()}/> {c}</span>
+  let InputA = <span><button class="btn btn-warning" onClick={correctAnswer === 'a' ? () => youAreCorrect() : () => youAreInCorrect()}>{a}</button></span>
+  let InputB = <span><button class="btn btn-warning" onClick={correctAnswer === 'b' ? () => youAreCorrect() : () => youAreInCorrect()}>{b}</button></span>
+  let InputC= <span><button  class="btn btn-warning" onClick={correctAnswer === 'c' ? () => youAreCorrect() : () => youAreInCorrect()}> {c}</button></span>
 
 
   return (
     <>
       <h4>Who is the Artist of this song?</h4>
-      <form>
-        {InputA}
-        {InputB}
-        {InputC}
-      </form>
+    
+      <ul>
+        <li>{InputA}</li>
+        <li>{InputB}</li>
+        <li>{InputC}</li>
+      </ul>
       {prompt}
     </>
   );
