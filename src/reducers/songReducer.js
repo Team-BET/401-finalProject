@@ -1,7 +1,5 @@
 const initState = {
   musicList: [],
-  // correctAnswers:0,
-  // inCorrectAnswers:0,
   score:0
 };
 
