@@ -36,21 +36,29 @@ function Quiz(props) {
   const [b, setB] = useState(options[randomTwo]);
   const [c, setC] = useState(options[randomThree]);
   
-  const youAreCorrect = async() => {
+  const youAreCorrect = async () => {
     setPrompt(<p>You are correct </p>);
     setActive(false);
     props.correct();
     await axios.post("https://bet-backend.herokuapp.com/api/v1/userscore", {
-      
+
       username: user.sub,
       score: "add"
     })
   };
-  
-  const youAreInCorrect = () => {
+
+  const youAreInCorrect = async () => {
+
+ 
+
     setPrompt(<p>You are Incorrect </p>);
     setActive(false);
     props.inCorrect();
+    await axios.post("https://bet-backend.herokuapp.com/api/v1/userscore", {
+      username: user.sub,
+      score: "sub"
+
+    })
   };
 
   let song = props.correctAnswer.artist.name;

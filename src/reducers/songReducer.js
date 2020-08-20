@@ -11,10 +11,11 @@ const reducer = (state = initState, action) => {
       newState.musicList = action.payload;
       break;
     case "ADD_TO_CORRECT":
-      newState.score = newState.score + 1;
+      newState.score = parseInt(newState.score) + 1;
+      console.log('newstate.score', newState.score)
       break;
       case "ADD_TO_INCORRECT":
-        newState.score = newState.score - 1;
+        newState.score = parseInt(newState.score) - 1;
         break;
      case "UPDATE_SCORE":
        console.log('action', action.payload)
