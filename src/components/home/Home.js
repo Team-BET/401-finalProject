@@ -1,11 +1,52 @@
-import React, { button } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link, Redirect } from "react-router-dom";
+import axios from "axios";
+import { connect } from "react-redux";
+import * as actions from "../actions/songAction.js";
+
+
 
 const Home = (props) => {
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { isAuthenticated , user} = useAuth0();
+  const {updateScore} =props
+  
+  
 
-  if (isAuthenticated) {
+  useEffect(() => {
+    
+    const getUserFunction = async() => {
+      if (user) {
+      let musicUser = await axios.get("https://bet-backend.herokuapp.com/api/v1/users", {
+     
+        username: user.sub
+    
+        })
+        if(musicUser.data.length > 0){
+          console.log('musicUser', musicUser.data[0])
+         
+          updateScore(musicUser.data[0].score)
+
+        }else if(musicUser.data.length === 0) {
+          await axios.post("https://bet-backend.herokuapp.com/api/v1/users", {
+            username : user.sub,
+            score: 0
+          })
+      
+          
+
+        }
+      }
+    } 
+   
+    getUserFunction()
+  }, [user, updateScore])    
+
+ 
+
+
+
+    if(isAuthenticated){
     return HomePlayButton();
   } else {
     return (
@@ -39,4 +80,15 @@ const HomePlayButton = (props) => {
   );
 };
 
-export default Home;
+
+
+
+const mapDispatchToProps = (dispatch) => ({
+  updateScore: (data) => dispatch(actions.updateScore(data)),
+ 
+});
+
+export default connect(null, mapDispatchToProps)(Home);
+
+
+

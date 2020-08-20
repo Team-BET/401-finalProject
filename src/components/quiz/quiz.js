@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/songAction.js";
 import { When } from "react-if";
+import axios from "axios";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Quiz(props) {
   const [quiz, setQuiz] = useState(false);
   const [prompt, setPrompt] = useState(<p></p>);
 
   const [active, setActive] = useState(true);
-
+  const {user} = useAuth0();
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
   };
@@ -34,10 +36,18 @@ function Quiz(props) {
   const [b, setB] = useState(options[randomTwo]);
   const [c, setC] = useState(options[randomThree]);
 
-  const youAreCorrect = () => {
+  const youAreCorrect = async() => {
     setPrompt(<p>You are correct </p>);
     setActive(false);
     props.correct();
+    await axios.post("https://bet-backend.herokuapp.com/api/v1/userscore", {
+      
+     
+      username: user.sub,
+      score: "add"
+
+    })
+
   };
   const youAreInCorrect = () => {
     setPrompt(<p>You are Incorrect </p>);

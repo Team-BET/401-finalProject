@@ -26,3 +26,12 @@ export const addInCorrect = () => {
   }
 }
 
+
+export const updateScore = (payload) => {
+  console.log('payload', payload)
+  return {
+    type: "UPDATE_SCORE",
+    payload,
+    
+  }
+}

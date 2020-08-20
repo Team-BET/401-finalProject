@@ -20,7 +20,7 @@ const Results = (props) => {
   return (
     isAuthenticated &&(
     <div>
-      <p>Results: {props.correctAnswers - props.inCorrectAnswers}</p>
+      <p>Results: {props.score}</p>
       <Link class="btn btn-danger btn-lg" to="/Songloading">
         Back To Game
       </Link>
@@ -31,8 +31,8 @@ const Results = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    correctAnswers: state.musicData.correctAnswers,
-    inCorrectAnswers: state.musicData.inCorrectAnswers,
+    score: state.musicData.score,
+    
   };
 };
 
