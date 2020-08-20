@@ -19,8 +19,8 @@ const Results = (props) => {
   
   return (
     isAuthenticated &&(
-    <div>
-      <p>Results: {props.score}</p>
+    <div class="result_color">
+      <p>Results: {user.name} : {props.score}</p>
       <Link class="btn btn-danger btn-lg" to="/Songloading">
         Back To Game
       </Link>

@@ -8,7 +8,7 @@ const Footer = (props) => {
         <MDBRow>
           <MDBCol md="6">
             <h5 className="title">
-              <strong>GUESS THE SONG FROM THE LYRICS</strong>
+              <strong>GUESS THE SONG GAME</strong>
             </h5>
             <p className="footer-paragraph">
               music brings harmony to the world!

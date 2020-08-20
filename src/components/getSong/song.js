@@ -83,7 +83,7 @@ function Song(props) {
       <div class="col-sm-12 float-left">
         <div class="col-sm-8 float-left">
           <ReactHowler src={counter.preview} playing={play} />
-          <h4 class="title">{counter.title}</h4>
+          <h4 class="pictureTitle">{counter.title}</h4>
           <img
             class="mr-4 float-left"
             alt={counter.artist}
