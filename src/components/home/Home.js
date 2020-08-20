@@ -1,6 +1,7 @@
 import React, { button } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link, Redirect } from "react-router-dom";
+import axios from "axios";
 
 const Home = (props) => {
   const { loginWithRedirect, isAuthenticated } = useAuth0();
