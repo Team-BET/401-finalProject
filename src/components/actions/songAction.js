@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const getTheSong = () => async (dispatch) => {
-  let result = await axios.get("https://api.deezer.com/chart/");
+  let result = await axios.get("https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart/");
   dispatch(getSong(result.data.tracks.data));
 };
 
