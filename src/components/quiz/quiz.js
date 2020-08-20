@@ -6,6 +6,7 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Quiz(props) {
+  console.log('props', props)
   const [quiz, setQuiz] = useState(false);
   const [prompt, setPrompt] = useState(<p></p>);
 
@@ -20,6 +21,8 @@ function Quiz(props) {
     props.wrongAnswerTwo.artist.name,
     props.correctAnswer.artist.name,
   ];
+console.log("option", options)
+
   let randomOne = getRandomInt(3);
   let randomTwo = getRandomInt(3);
   let randomThree = getRandomInt(3);
@@ -35,7 +38,7 @@ function Quiz(props) {
   const [a, setA] = useState(options[randomOne]);
   const [b, setB] = useState(options[randomTwo]);
   const [c, setC] = useState(options[randomThree]);
-
+  
   const youAreCorrect = async() => {
     setPrompt(<p>You are correct </p>);
     setActive(false);

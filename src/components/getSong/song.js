@@ -42,7 +42,8 @@ function Song(props) {
 
   let musicKeys = music;
   const randomInt = (max, min) => {
-    return Math.floor(Math.random() * (max - min)) + min;
+    // return Math.floor(Math.random() * (max - min)) + min;
+    return Math.floor(Math.random() * Math.floor(max));
   };
 
   const randomMusic = () => {
@@ -52,30 +53,28 @@ function Song(props) {
     } else {
       console.log("20-21");
       setConter(musicKeys[res]);
+      randomQuizAnswer(musicKeys[res]);
       return musicKeys[res];
     }
   };
 
-  const randomQuizAnswer = () => {
-    console.log("musickeysin rand", musicKeys);
+  const randomQuizAnswer = (correct) => {
+    
     let notCurrentMusic = musicKeys.filter(
-      (song) => song.title !== counter.title
+      (song) => song.title !== correct.title
     );
-    console.log("notCurrent", notCurrentMusic);
-    let res = notCurrentMusic.splice(randomInt(8, 0), 1);
-    console.log("notCurrent22", notCurrentMusic);
-    console.log("splice", res);
-    let res2 = notCurrentMusic.splice(randomInt(7, 0), 1);
-    console.log("splice2", res2);
-    console.log("current", notCurrentMusic);
-    setWrongAnswerOne(res[0]);
-    setWrongAnswerTwo(res2[0]);
+    let res = notCurrentMusic.splice(randomInt(8, 0), 1)[0];
+    
+    let res2 =  notCurrentMusic.splice(randomInt(7, 0), 1)[0];
+    console.log('curreent', counter, res, res2)
+    setWrongAnswerOne(res);
+    setWrongAnswerTwo(res2);
   };
 
   useEffect(() => {
     console.log("useEffect");
     randomMusic();
-    randomQuizAnswer();
+    
   }, []);
 
   return (
@@ -123,7 +122,7 @@ function Song(props) {
           fontSize="large"
           color="secondary"
           onClick={() => {
-            setConter(randomMusic());
+            randomMusic();
           }}
         ></SkipNextIcon>
       </div>
