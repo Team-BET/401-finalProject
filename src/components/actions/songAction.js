@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const getTheSong = () => async (dispatch) => {
-  console.log('inside acgtion')
   let result = await axios.get("https://api.deezer.com/chart/");
   dispatch(getSong(result.data.tracks.data));
 };
@@ -19,6 +18,7 @@ export  const addCorrect = () => {
     payload: null,
   }
 }
+
 export const addInCorrect = () => {
   return {
     type: "ADD_TO_INCORRECT",
@@ -28,7 +28,6 @@ export const addInCorrect = () => {
 
 
 export const updateScore = (payload) => {
-  console.log('payload', payload)
   return {
     type: "UPDATE_SCORE",
     payload,

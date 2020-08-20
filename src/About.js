@@ -30,10 +30,10 @@ export const About = () => (
           <MDBCard wide>
             <MDBCardImage cascade className="img-fluid" src={blandineImage} />
             <MDBCardBody cascade>
-              <MDBCardTitle>Blandine Dasilveira</MDBCardTitle>
-              <MDBCardText>
+              <MDBCardTitle className="about-name" >Blandine Dasilveira</MDBCardTitle>
+              <MDBCardText className="about-body">
                 Aspiring full stack developer. Currently have experience in
-                HTML5, CSS, Javascript, NodeJS, ExpressJS{" "}
+                HTML5, CSS, Javascript, NodeJS, ExpressJS, React{" "}
               </MDBCardText>
               <MDBBtn rounded color="danger">
                 {" "}
@@ -53,10 +53,10 @@ export const About = () => (
           <MDBCard wide>
             <MDBCardImage cascade className="img-fluid" src={eyobImage} />
             <MDBCardBody cascade>
-              <MDBCardTitle>Eyob Tamir</MDBCardTitle>
-              <MDBCardText>
+              <MDBCardTitle className="about-name">Eyob Tamir</MDBCardTitle>
+              <MDBCardText className="about-body">
                 Aspiring full stack developer. Currently have experience in
-                HTML5, CSS, Javascript, NodeJS, ExpressJS{" "}
+                HTML5, CSS, Javascript, NodeJS, ExpressJS, React{" "}
               </MDBCardText>
               <MDBBtn rounded color="danger">
                 <a href="https://github.com/Eyob1984"> Eyob Github</a>
@@ -75,10 +75,10 @@ export const About = () => (
           <MDBCard wide>
             <MDBCardImage cascade className="img-fluid" src={thomasImage} />
             <MDBCardBody cascade>
-              <MDBCardTitle>Thomas Tilahun</MDBCardTitle>
-              <MDBCardText>
+              <MDBCardTitle className="about-name">Thomas Tilahun</MDBCardTitle>
+              <MDBCardText className="about-body">
                 Aspiring full stack developer. Currently have experience in
-                HTML5, CSS, Javascript, NodeJS, ExpressJS{" "}
+                HTML5, CSS, Javascript, NodeJS, ExpressJS, React{" "}
               </MDBCardText>
               <MDBBtn rounded color="danger">
                 {" "}
