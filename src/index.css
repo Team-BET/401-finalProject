@@ -1,0 +1,157 @@
+body {
+  background-image: url(./components//logo_Image/headphones2.jpg);
+  opacity: 1;
+  padding: 10px;
+  margin: 0;
+}
+
+.row {
+  color: aliceblue;
+}
+
+.playToStart,
+.betMem,
+.aboutus,
+.result_color,
+.list-unstyled {
+  color: whitesmoke;
+}
+
+.btn {
+  margin: 2px !important;
+  color: white;
+  background-color: orangered;
+}
+
+.pictureTitle {
+  font-size: 18px;
+}
+
+.container {
+  min-height: 500px;
+}
+
+.page-footer {
+  background-color: #3b3b3a;
+  color: black;
+}
+
+.home-page {
+  color: black;
+}
+
+.title {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 38px;
+  padding: 3px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.contact-us,
+.about-name {
+  color: orangered;
+}
+
+.footer-paragraph {
+  color: whitesmoke;
+  font-family: serif;
+
+  font-style: italic;
+  font-size: 18px;
+}
+
+.about-body {
+  color: black;
+  font-family: serif;
+
+  font-style: italic;
+  font-size: 20px;
+}
+
+.hello {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding: 0 10px;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.good_luck {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: white;
+  font-size: 20;
+}
+
+.home_p {
+  font-family: Arial;
+  font-size: 18px;
+  color: white;
+}
+
+.footer {
+  position: relative;
+  height: 80px;
+  clear: both;
+  padding-top: 20px;
+  background-color: #85929e;
+  color: gray;
+  text-align: center;
+}
+
+h1,
+h2,
+p,
+ul,
+li {
+  font-family: sans-serif;
+}
+
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+ul.header {
+  background-color: #111;
+  padding: 0;
+}
+
+.footer-copyright {
+  background-color: #222;
+}
+
+.buttom {
+  color: white;
+}
+
+ul.header li a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.content li {
+  margin-bottom: 10px;
+}
