@@ -6,10 +6,8 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Quiz(props) {
-  console.log('props', props)
-  const [quiz, setQuiz] = useState(false);
-  const [prompt, setPrompt] = useState(<p></p>);
 
+  const [prompt, setPrompt] = useState(<p></p>);
   const [active, setActive] = useState(true);
   const {user} = useAuth0();
   const getRandomInt = (max) => {
@@ -21,7 +19,6 @@ function Quiz(props) {
     props.wrongAnswerTwo.artist.name,
     props.correctAnswer.artist.name,
   ];
-console.log("option", options)
 
   let randomOne = getRandomInt(3);
   let randomTwo = getRandomInt(3);
@@ -45,13 +42,11 @@ console.log("option", options)
     props.correct();
     await axios.post("https://bet-backend.herokuapp.com/api/v1/userscore", {
       
-     
       username: user.sub,
       score: "add"
-
     })
-
   };
+  
   const youAreInCorrect = () => {
     setPrompt(<p>You are Incorrect </p>);
     setActive(false);

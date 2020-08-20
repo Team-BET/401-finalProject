@@ -3,15 +3,10 @@ import { connect } from "react-redux";
 import ReactHowler from "react-howler";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
-import { AccessAlarm, ThreeDRotation } from "@material-ui/icons";
 import SkipNextIcon from "@material-ui/icons/SkipNext";
 import Quiz from "../quiz/quiz.js";
 import { makeStyles } from "@material-ui/core/styles";
-// import Card from "@material-ui/core/Card";
-// import CardActions from "@material-ui/core/CardActions";
-// import CardContent from "@material-ui/core/CardContent";
-// import Button from "@material-ui/core/Button";
-// import Typography from "@material-ui/core/Typography";
+
 
 const useStyles = makeStyles({
   root: {
@@ -42,7 +37,6 @@ function Song(props) {
 
   let musicKeys = music;
   const randomInt = (max, min) => {
-    // return Math.floor(Math.random() * (max - min)) + min;
     return Math.floor(Math.random() * Math.floor(max));
   };
 
@@ -51,7 +45,7 @@ function Song(props) {
     if (musicKeys[res].title === counter.title) {
       return randomMusic();
     } else {
-      console.log("20-21");
+     
       setConter(musicKeys[res]);
       randomQuizAnswer(musicKeys[res]);
       return musicKeys[res];
@@ -66,7 +60,7 @@ function Song(props) {
     let res = notCurrentMusic.splice(randomInt(8, 0), 1)[0];
     
     let res2 =  notCurrentMusic.splice(randomInt(7, 0), 1)[0];
-    console.log('curreent', counter, res, res2)
+    
     setWrongAnswerOne(res);
     setWrongAnswerTwo(res2);
   };
@@ -78,7 +72,7 @@ function Song(props) {
   }, []);
 
   return (
-    // <Card className={classes.root} variant="outlined">
+    
     <div class="row">
       <div class="col-sm-12 float-left">
         <div class="col-sm-8 float-left">
@@ -117,6 +111,7 @@ function Song(props) {
             setPlay(false);
           }}
         ></PauseCircleFilledIcon>
+
         <SkipNextIcon
           style={{ fontSize: 50 }}
           fontSize="large"
@@ -127,7 +122,7 @@ function Song(props) {
         ></SkipNextIcon>
       </div>
     </div>
-    // {/* </Card> */}
+   
   );
 }
 

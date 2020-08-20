@@ -15,7 +15,6 @@ const Footer = (props) => {
             </p>
           </MDBCol>
           <MDBCol md="6">
-            <h5 className="title"></h5>
             <ul>
               <p className="contact-us">Contact Us - LinkedIn</p>
               <li className="list-unstyled">
