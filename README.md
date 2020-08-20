@@ -32,18 +32,17 @@
 
 ![Domain Modeling](./src/asset/image/Domain-modeling.jpg)
 
-
 ## Project management
-)
-* [Presentation SlideDeck](https://docs.google.com/presentation/d/14MQy4SbQqbP59aVjTqjdA82c_wscyng6RTy0o1bmPDc/edit?usp=sharing)
 
+- Trello
 
+- [Presentation SlideDeck](https://docs.google.com/presentation/d/14MQy4SbQqbP59aVjTqjdA82c_wscyng6RTy0o1bmPDc/edit?usp=sharing)
 
-## Main Dependencies 
+## Main Dependencies
 
 - [MongoDB](https://www.mongodb.com/)
 - [NodeJS](https://nodejs.org/en/)
-- [Express](https://expressjs.com/) 
+- [Express](https://expressjs.com/)
 - [Deezer-API](https://developers.deezer.com/login?redirect=/api)
 - [MongoDB](https://www.mongodb.com/)
 - [react](https://reactjs.org/)
@@ -51,9 +50,6 @@
 - [Boostrap](https://mdbootstrap.com/)
 - [MDBoostrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 - [react-if](https://www.npmjs.com/package/react-if)
-
-
-
 
 ### Technologies Used
 
@@ -68,25 +64,22 @@ Vs Code
 Ubutu
 Github
 
-
 ### Referencence
 
 Google
 Stackoverflow
-Code Fellow Ta 
+Code Fellow Ta
 
 ### App Demo
 
-[live demo]()
+[live demo](https://betmusicgame.netlify.app)
 
 ### Authors
-* Blandine Dasilveira
-* Eyob Tamir
-* Thomas Tilahun
+
+- Blandine Dasilveira
+- Eyob Tamir
+- Thomas Tilahun
 
 **Team BET**
 
-<center>© CodeFellows | 2020</center>
-
-
- 
+<center>© bet-music-gussing-game | 2020</center>

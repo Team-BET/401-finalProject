@@ -49,9 +49,9 @@ const Footer = (props) => {
       <div className="footer-copyright text-center py-3">
         <MDBContainer className="buttom" fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a className="site" href="https://www.mdbootstrap.com">
+          <a className="site" href="https://betmusicgame.netlify.app">
             {" "}
-            bet-guessing-game.com{" "}
+            betmusicgame.netlify.app{" "}
           </a>
         </MDBContainer>
       </div>

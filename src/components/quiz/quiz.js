@@ -6,10 +6,9 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Quiz(props) {
-
   const [prompt, setPrompt] = useState(<p></p>);
   const [active, setActive] = useState(true);
-  const {user} = useAuth0();
+  const { user } = useAuth0();
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
   };
@@ -35,30 +34,25 @@ function Quiz(props) {
   const [a, setA] = useState(options[randomOne]);
   const [b, setB] = useState(options[randomTwo]);
   const [c, setC] = useState(options[randomThree]);
-  
+
   const youAreCorrect = async () => {
     setPrompt(<p>You are correct </p>);
     setActive(false);
     props.correct();
     await axios.post("https://bet-backend.herokuapp.com/api/v1/userscore", {
-
       username: user.sub,
-      score: "add"
-    })
+      score: "add",
+    });
   };
 
   const youAreInCorrect = async () => {
-
- 
-
     setPrompt(<p>You are Incorrect </p>);
     setActive(false);
     props.inCorrect();
     await axios.post("https://bet-backend.herokuapp.com/api/v1/userscore", {
       username: user.sub,
-      score: "sub"
-
-    })
+      score: "sub",
+    });
   };
 
   let song = props.correctAnswer.artist.name;
@@ -118,7 +112,7 @@ function Quiz(props) {
 
   return (
     <>
-      <h4>Who is the Artist of this song?</h4>
+      <h5>Who is the Artist of this song?</h5>
       <When condition={active}>
         <ul>
           <li>{InputA}</li>

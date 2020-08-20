@@ -30,7 +30,9 @@ export const About = () => (
           <MDBCard wide>
             <MDBCardImage cascade className="img-fluid" src={blandineImage} />
             <MDBCardBody cascade>
-              <MDBCardTitle className="about-name" >Blandine Dasilveira</MDBCardTitle>
+              <MDBCardTitle className="about-name">
+                Blandine Dasilveira
+              </MDBCardTitle>
               <MDBCardText className="about-body">
                 Aspiring full stack developer. Currently have experience in
                 HTML5, CSS, Javascript, NodeJS, ExpressJS, React{" "}
@@ -77,8 +79,8 @@ export const About = () => (
             <MDBCardBody cascade>
               <MDBCardTitle className="about-name">Thomas Tilahun</MDBCardTitle>
               <MDBCardText className="about-body">
-                Aspiring full stack developer. Currently have experience in
-                HTML5, CSS, Javascript, NodeJS, ExpressJS, React{" "}
+                Full Stack Software developer with a background of computer
+                Hardware, Networking and Graphics Design.{" "}
               </MDBCardText>
               <MDBBtn rounded color="danger">
                 {" "}
