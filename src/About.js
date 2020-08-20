@@ -17,8 +17,8 @@ import thomasImage from "./asset/image/thomas.jpg";
 
 export const About = () => (
   <div>
-    <h2>About Us</h2>
-    <p>BET Members</p>
+    <h2 class="aboutus">About Us</h2>
+    <p class="betMem">BET Members</p>
 
     <MDBRow>
       <MDBCol>

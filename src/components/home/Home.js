@@ -55,7 +55,7 @@ const Home = (props) => {
         <p class="home_p">
           Can you guess the artist? This quiz is unique and fun because it
           involves
-          <br /> a series of popular song lyrics, and you have to imagine who
+          <br /> a series of popular song, and you have to imagine who
           sung the song. <br />
           For someone who is a fan of music, this may be a total breeze. <br />
           Those who are not as familiar with music can learn something. <br />{" "}
@@ -71,7 +71,7 @@ const Home = (props) => {
 const HomePlayButton = (props) => {
   return (
     <div>
-      <h3>Please press the paly button to start the game</h3>
+      <h3 class="playToStart">Please press the paly button to start the game</h3>
 
       <Link class="btn btn-danger btn-lg" to="/Songloading">
         Play
